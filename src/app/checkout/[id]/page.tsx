@@ -35,7 +35,7 @@ export default function Checkout() {
         if (paymentFlag == 'online') {
 
 
-            const data = await makeOnlinePayment(id, 'http://localhost:3000', values)
+            const data = await makeOnlinePayment(id, 'https://next-ecommerce-rust-five.vercel.app', values)
 
             if (data.status == 'success') {
                 window.location.href = data.session.url
